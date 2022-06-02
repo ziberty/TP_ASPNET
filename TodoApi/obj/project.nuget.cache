@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "9ZI5EIisSnSnNqf10hlxX0ct8HRCcB3jDe/CXDdHL5jEE5TIRauOcmafiQmDGluexlkclpGyZWb7uvQZlgBs5w==",
+  "dgSpecHash": "SeJbwVOBhvRD33f2XSFjDlXL5j3Z2ET6fYOxjfc1zy4dfLVikOnD5XHSX8kgvIylIx8oUj0Ry+szOYtTvatnpg==",
   "success": true,
-  "projectFilePath": "D:\\Cours\\B3\\services web\\chef restaurant\\TodoApi\\TodoApi.csproj",
+  "projectFilePath": "D:\\Cours\\B3\\services web\\chef restaurant\\TP_ASPNET\\TodoApi\\TodoApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\hdega\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\hdega\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
