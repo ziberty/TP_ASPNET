@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Cours\\B3\\services web\\chef restaurant\\TP_ASPNET\\TodoApi\\TodoApi.csproj": {}
+    "G:\\ecole\\epsi\\B3\\TP_ASPNET\\TodoApi\\TodoApi.csproj": {}
   },
   "projects": {
-    "D:\\Cours\\B3\\services web\\chef restaurant\\TP_ASPNET\\TodoApi\\TodoApi.csproj": {
+    "G:\\ecole\\epsi\\B3\\TP_ASPNET\\TodoApi\\TodoApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Cours\\B3\\services web\\chef restaurant\\TP_ASPNET\\TodoApi\\TodoApi.csproj",
+        "projectUniqueName": "G:\\ecole\\epsi\\B3\\TP_ASPNET\\TodoApi\\TodoApi.csproj",
         "projectName": "TodoApi",
-        "projectPath": "D:\\Cours\\B3\\services web\\chef restaurant\\TP_ASPNET\\TodoApi\\TodoApi.csproj",
-        "packagesPath": "C:\\Users\\hdega\\.nuget\\packages\\",
-        "outputPath": "D:\\Cours\\B3\\services web\\chef restaurant\\TP_ASPNET\\TodoApi\\obj\\",
+        "projectPath": "G:\\ecole\\epsi\\B3\\TP_ASPNET\\TodoApi\\TodoApi.csproj",
+        "packagesPath": "C:\\Users\\Hugo\\.nuget\\packages\\",
+        "outputPath": "G:\\ecole\\epsi\\B3\\TP_ASPNET\\TodoApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\hdega\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Hugo\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
