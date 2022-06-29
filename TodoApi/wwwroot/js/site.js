@@ -1,19 +1,25 @@
-﻿const uri = 'api/todoitems';
-let todos = [];
+﻿const uri = 'api/commandes';
+let commandes = [];
 
-function getItems() {
+function getCommandes() {
     fetch(uri)
         .then(response => response.json())
-        .then(data => _displayItems(data))
-        .catch(error => console.error('Unable to get items.', error));
+        .then(data => _displayCommandes(data))
+        .catch(error => console.error('Impossible de récupérer les commandes.', error));
 }
 
-function addItem() {
-    const addNameTextbox = document.getElementById('add-name');
+function addCommande() {
+    const addEntreeTextbox = document.getElementById('add-entree');
+    const addPlatTextbox = document.getElementById('add-plat');
+    const addDessertTextbox = document.getElementById('add-dessert');
+    const addBoissonButton = document.getElementById('add-boisson').checked;
 
-    const item = {
-        isComplete: false,
-        name: addNameTextbox.value.trim()
+    const commande = {
+        Entree: addEntreeTextbox.value.trim(),
+        Plat: addPlatTextbox.value.trim(),
+        Dessert:addDessertTextbox.value.trim(),
+        Boisson: addBoissonButton.value,
+        EtatCommande: "Commande enregistrée"
     };
 
     fetch(uri, {
@@ -22,104 +28,83 @@ function addItem() {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(item)
+        body: JSON.stringify(commande)
     })
         .then(response => response.json())
         .then(() => {
-            getItems();
-            addNameTextbox.value = '';
+            getCommandes();
+            addEntreeTextbox.value = '';
+            addPlatTextbox.value = '';
+            addDessertTextbox.value = '';
+            addBoissonButton.value = false;
         })
-        .catch(error => console.error('Unable to add item.', error));
+        .catch(error => console.error('Impossible d\'ajouter la commande.', error));
 }
 
-function deleteItem(id) {
-    fetch(`${uri}/${id}`, {
-        method: 'DELETE'
-    })
-        .then(() => getItems())
-        .catch(error => console.error('Unable to delete item.', error));
-}
-
-function displayEditForm(id) {
-    const item = todos.find(item => item.id === id);
-
-    document.getElementById('edit-name').value = item.name;
-    document.getElementById('edit-id').value = item.id;
-    document.getElementById('edit-isComplete').checked = item.isComplete;
-    document.getElementById('editForm').style.display = 'block';
-}
-
-function updateItem() {
-    const itemId = document.getElementById('edit-id').value;
-    const item = {
-        id: parseInt(itemId, 10),
-        isComplete: document.getElementById('edit-isComplete').checked,
-        name: document.getElementById('edit-name').value.trim()
+function updateCommande() {
+    const commandeId = document.getElementById('id-commande').value;
+    const commandeGet = commandes.find(item => item.id === parseInt(commandeId, 10));
+    
+    const commande = {
+        Id: parseInt(commandeId, 10),
+        Entree: commandeGet.entree,
+        Plat: commandeGet.plat,
+        Dessert: commandeGet.dessert,
+        Boisson: commandeGet.boisson,
+        EtatCommande: document.querySelector('input[name="etat-commande"]:checked').value
     };
 
-    fetch(`${uri}/${itemId}`, {
+    fetch(`${uri}/${commandeId}`, {
         method: 'PUT',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify(item)
+        body: JSON.stringify(commande)
     })
-        .then(() => getItems())
-        .catch(error => console.error('Unable to update item.', error));
+        .then(() => getCommandes())
+        .catch(error => console.error('Impossible de mettre à jour la commande.', error));
 
     closeInput();
 
     return false;
 }
 
-function closeInput() {
-    document.getElementById('editForm').style.display = 'none';
-}
-
-function _displayCount(itemCount) {
-    const name = (itemCount === 1) ? 'to-do' : 'to-dos';
-
-    document.getElementById('counter').innerText = `${itemCount} ${name}`;
-}
-
-function _displayItems(data) {
-    const tBody = document.getElementById('todos');
+function _displayCommandes(data) {
+    const tBody = document.getElementById('commandes');
     tBody.innerHTML = '';
-
-    _displayCount(data.length);
-
-    const button = document.createElement('button');
-
-    data.forEach(item => {
-        let isCompleteCheckbox = document.createElement('input');
-        isCompleteCheckbox.type = 'checkbox';
-        isCompleteCheckbox.disabled = true;
-        isCompleteCheckbox.checked = item.isComplete;
-
-        let editButton = button.cloneNode(false);
-        editButton.innerText = 'Edit';
-        editButton.setAttribute('onclick', `displayEditForm(${item.id})`);
-
-        let deleteButton = button.cloneNode(false);
-        deleteButton.innerText = 'Delete';
-        deleteButton.setAttribute('onclick', `deleteItem(${item.id})`);
+    
+    data.forEach(commande => {
+        let hasBoissonCheckbox = document.createElement('input');
+        hasBoissonCheckbox.type = 'checkbox';
+        hasBoissonCheckbox.disabled = true;
+        hasBoissonCheckbox.checked = commande.Boisson;
 
         let tr = tBody.insertRow();
 
         let td1 = tr.insertCell(0);
-        td1.appendChild(isCompleteCheckbox);
+        let textIdCommande = document.createTextNode(commande.id);
+        td1.appendChild(textIdCommande);
 
         let td2 = tr.insertCell(1);
-        let textNode = document.createTextNode(item.name);
-        td2.appendChild(textNode);
+        let textEntree = document.createTextNode(commande.entree);
+        td2.appendChild(textEntree);
 
         let td3 = tr.insertCell(2);
-        td3.appendChild(editButton);
+        let textPlat = document.createTextNode(commande.plat);
+        td3.appendChild(textPlat);
 
         let td4 = tr.insertCell(3);
-        td4.appendChild(deleteButton);
+        let textDessert = document.createTextNode(commande.dessert);
+        td4.appendChild(textDessert);
+
+        let td5 = tr.insertCell(4);
+        td5.appendChild(hasBoissonCheckbox);
+
+        let td6 = tr.insertCell(5);
+        let textEtat = document.createTextNode(commande.etatCommande);
+        td6.appendChild(textEtat);
     });
 
-    todos = data;
+    commandes = data;
 }

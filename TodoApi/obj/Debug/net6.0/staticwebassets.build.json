@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "yRVplQVhVXCFiygJNCivF6EsNcz3yQzCyBpn1LAPxis=",
+  "Hash": "KdAzctvJgKGmV8rZHQbr9yUwAzAEezd3sBtKqCABiyg=",
   "Source": "TodoApi",
   "BasePath": "_content/TodoApi",
   "Mode": "Default",
@@ -10,17 +10,17 @@
     {
       "Name": "TodoApi\\wwwroot",
       "Source": "TodoApi",
-      "ContentRoot": "G:\\ecole\\epsi\\B3\\TP_ASPNET\\TodoApi\\wwwroot\\",
+      "ContentRoot": "D:\\Cours\\B3\\services web\\chef restaurant\\TP_ASPNET\\TodoApi\\wwwroot\\",
       "BasePath": "_content/TodoApi",
       "Pattern": "**"
     }
   ],
   "Assets": [
     {
-      "Identity": "G:\\ecole\\epsi\\B3\\TP_ASPNET\\TodoApi\\wwwroot\\CSS\\site.css",
+      "Identity": "D:\\Cours\\B3\\services web\\chef restaurant\\TP_ASPNET\\TodoApi\\wwwroot\\CSS\\site.css",
       "SourceId": "TodoApi",
       "SourceType": "Discovered",
-      "ContentRoot": "G:\\ecole\\epsi\\B3\\TP_ASPNET\\TodoApi\\wwwroot\\",
+      "ContentRoot": "D:\\Cours\\B3\\services web\\chef restaurant\\TP_ASPNET\\TodoApi\\wwwroot\\",
       "BasePath": "_content/TodoApi",
       "RelativePath": "CSS/site.css",
       "AssetKind": "All",
@@ -34,10 +34,10 @@
       "OriginalItemSpec": "wwwroot\\CSS\\site.css"
     },
     {
-      "Identity": "G:\\ecole\\epsi\\B3\\TP_ASPNET\\TodoApi\\wwwroot\\index.html",
+      "Identity": "D:\\Cours\\B3\\services web\\chef restaurant\\TP_ASPNET\\TodoApi\\wwwroot\\index.html",
       "SourceId": "TodoApi",
       "SourceType": "Discovered",
-      "ContentRoot": "G:\\ecole\\epsi\\B3\\TP_ASPNET\\TodoApi\\wwwroot\\",
+      "ContentRoot": "D:\\Cours\\B3\\services web\\chef restaurant\\TP_ASPNET\\TodoApi\\wwwroot\\",
       "BasePath": "_content/TodoApi",
       "RelativePath": "index.html",
       "AssetKind": "All",
@@ -51,10 +51,10 @@
       "OriginalItemSpec": "wwwroot\\index.html"
     },
     {
-      "Identity": "G:\\ecole\\epsi\\B3\\TP_ASPNET\\TodoApi\\wwwroot\\js\\site.js",
+      "Identity": "D:\\Cours\\B3\\services web\\chef restaurant\\TP_ASPNET\\TodoApi\\wwwroot\\js\\site.js",
       "SourceId": "TodoApi",
       "SourceType": "Discovered",
-      "ContentRoot": "G:\\ecole\\epsi\\B3\\TP_ASPNET\\TodoApi\\wwwroot\\",
+      "ContentRoot": "D:\\Cours\\B3\\services web\\chef restaurant\\TP_ASPNET\\TodoApi\\wwwroot\\",
       "BasePath": "_content/TodoApi",
       "RelativePath": "js/site.js",
       "AssetKind": "All",

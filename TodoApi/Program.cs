@@ -6,10 +6,6 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-builder.Services.AddDbContext<TodoContext>(opt => opt.UseInMemoryDatabase("TodoList"));
-builder.Services.AddDbContext<EntreeContext>(opt => opt.UseInMemoryDatabase("Entree"));
-builder.Services.AddDbContext<PlatContext>(opt => opt.UseInMemoryDatabase("Plat"));
-builder.Services.AddDbContext<DessertContext>(opt => opt.UseInMemoryDatabase("Dessert"));
 builder.Services.AddDbContext<CommandeContext>(opt => opt.UseInMemoryDatabase("Commande"));
 //builder.Services.AddSwaggerGen(c =>
 //{

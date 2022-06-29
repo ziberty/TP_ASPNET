@@ -791,3 +791,4 @@ G:\ecole\epsi\B3\TP_ASPNET\TodoApi\obj\Debug\net6.0\refint\TodoApi.dll
 G:\ecole\epsi\B3\TP_ASPNET\TodoApi\obj\Debug\net6.0\TodoApi.pdb
 G:\ecole\epsi\B3\TP_ASPNET\TodoApi\obj\Debug\net6.0\TodoApi.genruntimeconfig.cache
 G:\ecole\epsi\B3\TP_ASPNET\TodoApi\obj\Debug\net6.0\ref\TodoApi.dll
+D:\Cours\B3\services web\chef restaurant\TP_ASPNET\TodoApi\bin\Debug\net6.0\TodoApi.staticwebassets.runtime.json
